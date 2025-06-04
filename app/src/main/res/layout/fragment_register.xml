@@ -4,35 +4,54 @@
     android:layout_height="match_parent">
 
     <TextView
-        android:id="@+id/Login"
+        android:id="@+id/Register"
         style="@style/h4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="Let's Login"
+        android:text="Let's Register"
         android:textSize="30sp"
-        android:layout_marginTop="150dp"
+        android:layout_marginTop="90dp"
         android:layout_gravity="center_horizontal"
         >
     </TextView>
 
     <TextView
-        android:id="@+id/DontHaveAccount"
+        android:id="@+id/HaveAccount"
         style="@style/h2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="Don’t  have an account? Register"
+        android:text="You already have an account? Login"
         android:textSize="15sp"
-        android:layout_marginTop="200dp"
+        android:layout_marginTop="140dp"
         android:layout_gravity="center_horizontal"
         >
+
     </TextView>
+    <EditText
+        android:id="@+id/firstname"
+        android:layout_width="350dp"
+        android:layout_height="@dimen/edittextHeight"
+        android:layout_marginTop="200dp"
+        style="@style/editText"
+        android:layout_gravity="center_horizontal"
+        android:hint="First Name"
+        />
+    <EditText
+        android:id="@+id/lastname"
+        android:layout_width="350dp"
+        android:layout_height="@dimen/edittextHeight"
+        android:layout_marginTop="270dp"
+        style="@style/editText"
+        android:layout_gravity="center_horizontal"
+        android:hint="Last Name"
+        />
     <EditText
         android:id="@+id/Email"
         android:layout_width="350dp"
         android:layout_height="@dimen/edittextHeight"
-        android:layout_marginTop="280dp"
+        android:layout_marginTop="340dp"
         style="@style/editText"
         android:layout_gravity="center_horizontal"
         android:hint="Email"
@@ -41,30 +60,20 @@
         android:id="@+id/password"
         android:layout_width="350dp"
         android:layout_height="@dimen/edittextHeight"
-        android:layout_marginTop="350dp"
+        android:layout_marginTop="410dp"
         style="@style/editText"
         android:layout_gravity="center_horizontal"
         android:hint="Password"
         />
-    <TextView
-        android:id="@+id/ForgotPassword"
-        style="@style/h2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="Forgot Password ?"
-        android:textSize="15sp"
-        android:layout_marginTop="420dp"
-        android:layout_marginLeft="34dp"
-        />
+
     <Button
-        android:id="@+id/LoginBoutton"
+        android:id="@+id/RegisterButton"
         android:layout_width="@dimen/mediumButtonWidth"
         android:layout_height="@dimen/mediumButtonHeight"
         style="@style/blueButtonStyle"
 
-        android:layout_marginTop="500dp"
-        android:text="LOGIN"
+        android:layout_marginTop="520dp"
+        android:text="Register"
         android:gravity="center"
         android:layout_gravity="center_horizontal"
         />
@@ -72,7 +81,7 @@
         android:id="@+id/facebookLogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="560dp"
+        android:layout_marginTop="580dp"
         android:src="@drawable/facebook_login"
         android:layout_marginLeft="56dp"
         />
@@ -80,14 +89,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Facebook"
-        android:layout_marginTop="570dp"
+        android:layout_marginTop="590dp"
         android:layout_marginLeft="100dp"/>
 
     <ImageView
         android:id="@+id/googleLogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="560dp"
+        android:layout_marginTop="580dp"
         android:src="@drawable/google_login"
         android:layout_marginLeft="213dp"
         />
@@ -95,9 +104,16 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Google"
-        android:layout_marginTop="570dp"
+        android:layout_marginTop="590dp"
         android:layout_marginLeft="259dp"/>
 
-
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="290dp"
+        android:indeterminateTint="@color/main"
+        android:visibility="gone"/>
 
 </FrameLayout>
