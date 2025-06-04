@@ -2,19 +2,18 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
-    alias(libs.plugins.google.gms.google.services)
-    id("org.jetbrains.kotlin.kapt")
-    alias(libs.plugins.dagger.hilt)
-
-
+    id("com.google.gms.google-services")
+    id("com.google.dagger.hilt.android")
+    id("com.google.devtools.ksp") version "2.0.0-1.0.21"
+    id("kotlin-parcelize")
 }
 
 android {
-    namespace = "com.example.monappli"
+    namespace = "com.example.ecomapp"
     compileSdk = 35
 
     defaultConfig {
-        applicationId = "com.example.monappli"
+        applicationId = "com.example.ecomapp"
         minSdk = 24
         targetSdk = 35
         versionCode = 1
@@ -39,13 +38,9 @@ android {
     kotlinOptions {
         jvmTarget = "11"
     }
-
     buildFeatures {
-            compose = true
-            viewBinding = true
+        viewBinding = true
     }
-
-
 }
 
 dependencies {
@@ -58,11 +53,8 @@ dependencies {
     implementation(libs.androidx.ui.graphics)
     implementation(libs.androidx.ui.tooling.preview)
     implementation(libs.androidx.material3)
-    implementation(libs.androidx.appcompat)
-    implementation(libs.material)
-    implementation(libs.androidx.activity)
-    implementation(libs.androidx.constraintlayout)
-    implementation(libs.firebase.auth)
+    implementation(libs.androidx.navigation.fragment.ktx)
+    implementation(libs.androidx.navigation.ui.ktx)
     implementation(libs.androidx.credentials)
     implementation(libs.androidx.credentials.play.services.auth)
     implementation(libs.googleid)
@@ -73,14 +65,21 @@ dependencies {
     androidTestImplementation(libs.androidx.ui.test.junit4)
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
-    implementation(libs.dagger)
-    kapt(libs.daggerCompiler)
+    //Navigation component
 
-    implementation(libs.hiltAndroid)
-    kapt(libs.hiltCompiler)
-    implementation("androidx.hilt:hilt-navigation-fragment:1.1.0")
+    val nav_version = "2.5.2"
+    implementation("androidx.navigation:navigation-fragment-ktx:$nav_version")
+    implementation("androidx.navigation:navigation-ui-ktx:$nav_version")
 
+    implementation(platform("com.google.firebase:firebase-bom:32.4.0"))
+    implementation("com.google.firebase:firebase-analytics")
+    implementation("com.google.firebase:firebase-auth")
+    implementation("com.google.firebase:firebase-firestore")
+    implementation("com.google.firebase:firebase-storage")
 
-
-
+//    implementation(libs.firebase.auth.ktx)
+//    implementation(libs.firebase.firestore.ktx)
+//    implementation(libs.firebase.storage.ktx)
+    implementation("com.google.dagger:hilt-android:2.56.2")
+    ksp("com.google.dagger:hilt-android-compiler:2.56.2")
 }

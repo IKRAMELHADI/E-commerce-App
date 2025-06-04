@@ -19,5 +19,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "MonAppli"
+rootProject.name = "EcomAPP"
 include(":app")
+ 

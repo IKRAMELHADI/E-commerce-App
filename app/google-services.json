@@ -1,21 +1,21 @@
 {
   "project_info": {
-    "project_number": "542142215368",
-    "project_id": "monappli-f1ace",
-    "storage_bucket": "monappli-f1ace.firebasestorage.app"
+    "project_number": "29893793606",
+    "project_id": "ecomapp-9c5d7",
+    "storage_bucket": "ecomapp-9c5d7.firebasestorage.app"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:542142215368:android:7c0a1fce81b7c66fafe1fd",
+        "mobilesdk_app_id": "1:29893793606:android:7eb1960493640159517747",
         "android_client_info": {
-          "package_name": "com.example.monappli"
+          "package_name": "com.example.ecomapp"
         }
       },
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyA4dSF-kqxb2Q6-UFr_rlDTedEhg-6X3Ec"
+          "current_key": "AIzaSyAOPko1PJ60uBIe5G3MLb9PblJRPwiR-lc"
         }
       ],
       "services": {
