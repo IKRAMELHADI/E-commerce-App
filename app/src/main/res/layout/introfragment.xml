@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <TextView
+        android:id="@+id/tvRightAddressForShopping"
+        style="@style/h4"
+        android:layout_width="300dp"
+        android:layout_height="136dp"
+        android:gravity="center"
+        android:text="@string/rightAddress"
+        android:textSize="30sp"
+        android:layout_marginTop="250dp"
+        android:layout_gravity="center_horizontal"
+        >
+    </TextView>
+
+    <TextView
+        style="@style/h2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:gravity="center"
+        android:text="@string/quality"
+        android:textAlignment="center"
+        android:textSize="15sp"
+        android:layout_marginTop="400dp"
+        android:layout_gravity="center_horizontal"
+        >
+
+    </TextView>
+    <Button
+        android:layout_width="@dimen/smallButtonWidth"
+        android:layout_height="@dimen/smallButtonHeight"
+        style="@style/blueButtonStyle"
+
+        android:layout_marginTop="550dp"
+        android:text="Start"
+        android:gravity="center"
+        android:layout_gravity="center_horizontal"
+        />
+
+
+
+</FrameLayout>
