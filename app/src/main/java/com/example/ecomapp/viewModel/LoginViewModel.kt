@@ -1,3 +1,4 @@
+package com.example.ecomapp.viewModel
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
