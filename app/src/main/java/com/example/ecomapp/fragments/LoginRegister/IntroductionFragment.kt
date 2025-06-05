@@ -12,7 +12,7 @@ import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import com.example.ecomapp.R
-import com.example.ecomapp.activities.shopping
+import com.example.ecomapp.activities.ShoppingActivity
 import com.example.ecomapp.databinding.FragmentIntroBinding
 import com.example.ecomapp.viewModel.IntroductionViewModel
 import com.example.ecomapp.viewModel.IntroductionViewModel.Companion.ACCOUNT_OPTIONS_FRAGMENT
@@ -23,7 +23,6 @@ import dagger.hilt.android.AndroidEntryPoint
 @AndroidEntryPoint
 class IntroductionFragment : Fragment(R.layout.fragment_intro) {
     private lateinit var binding: FragmentIntroBinding
-    private val viewModel by viewModels<IntroductionViewModel>()
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -37,28 +36,12 @@ class IntroductionFragment : Fragment(R.layout.fragment_intro) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        lifecycleScope.launchWhenStarted {
-            viewModel.navigate.collect {
-                when (it) {
-                    SHOPPING_ACTIVITY -> {
-                        Intent(requireActivity(), shopping::class.java).also { intent ->
-                            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK)
-                            startActivity(intent)
-                        }
-                    }
-
-                    ACCOUNT_OPTIONS_FRAGMENT -> {
-                        findNavController().navigate(it)
-                    }
-
-                    else -> Unit
-                }
-            }
-        }
-
         binding.startButton.setOnClickListener {
-            viewModel.startButtonClick()
+            // Navigation directe sans ViewModel
             findNavController().navigate(R.id.action_introductionFragment_to_accountOptionsFragment)
         }
+
+
+
     }
 }

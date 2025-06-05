@@ -6,6 +6,8 @@ plugins {
     id("com.google.dagger.hilt.android")
     id("com.google.devtools.ksp") version "2.0.0-1.0.21"
     id("kotlin-parcelize")
+    id("org.jetbrains.kotlin.kapt")
+
 }
 
 android {
@@ -65,6 +67,10 @@ dependencies {
     androidTestImplementation(libs.androidx.ui.test.junit4)
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
+    implementation ("de.hdodenhof:circleimageview:3.1.0")
+    implementation ("br.com.simplepass:loading-button-android:2.2.0")
+    implementation ("com.github.bumptech.glide:glide:4.16.0")
+    kapt ("com.github.bumptech.glide:compiler:4.16.0")
     //Navigation component
 
     val nav_version = "2.5.2"

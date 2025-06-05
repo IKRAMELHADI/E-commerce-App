@@ -23,7 +23,7 @@ class IntroductionViewModel @Inject constructor(
 
     companion object{
         const val SHOPPING_ACTIVITY = 23
-        //const val ACCOUNT_OPTIONS_FRAGMENT = R.id.action_introductionFragment_to_accountOptionsFragment
+        const val ACCOUNT_OPTIONS_FRAGMENT = "R.id.action_introductionFragment_to_accountOptionsFragment"
     }
 
     init {

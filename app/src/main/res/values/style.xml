@@ -6,7 +6,15 @@
         <item name="android:textColor">@color/g_black</item>
         <item name="android:textSize">@dimen/h4TextSize</item>
     </style>
-
+    <style name="tabLayout_text">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">#000000</item>
+    </style>
+    <style name="MediumTextViewThin">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:fontFamily">sans-serif-thin</item> <!-- or your custom font -->
+    </style>
     <style name="h2">
         <item name="android:fontFamily">@font/poppins_light</item>
         <item name="android:textColor">@color/g_gray700</item>

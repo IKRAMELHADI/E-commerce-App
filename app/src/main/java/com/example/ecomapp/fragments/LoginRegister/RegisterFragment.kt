@@ -64,7 +64,7 @@ class RegisterFragment : Fragment() {
                         binding.RegisterButton.apply {
                             text = "Chargement..."
                             isEnabled = false
-                            setBackgroundColor(ContextCompat.getColor(requireContext(), R.color.purple_200))
+                            setBackgroundColor(ContextCompat.getColor(requireContext(), R.color.secondMain))
                         }
                     }
                     is Resource.Success -> {
