@@ -9,7 +9,7 @@
         android:id="@+id/homeFragment"
         android:name="com.example.ecomapp.fragments.shopping.HomeFragment"
         android:label="HomeFragment"
-        tools:layout="@layout/fragment_home">
+        tools:layout="@layout/fragmant_home">
         <action
             android:id="@+id/action_homeFragment_to_productDetailsFragment"
             app:destination="@id/productDetailsFragment" />
@@ -59,7 +59,7 @@
         tools:layout="@layout/fragment_product_details">
         <argument
             android:name="product"
-            app:argType="com.example.kelineyt.data.Product" />
+            app:argType="com.example.ecomapp.data.Product" />
     </fragment>
     <fragment
         android:id="@+id/addressFragment"
@@ -68,7 +68,7 @@
         tools:layout="@layout/fragment_address">
         <argument
             android:name="address"
-            app:argType="com.example.kelineyt.data.Address"
+            app:argType="com.example.ecomapp.data.Address"
             app:nullable="true"
             android:defaultValue="@null" />
     </fragment>
@@ -85,7 +85,7 @@
             app:argType="float" />
         <argument
             android:name="products"
-            app:argType="com.example.kelineyt.data.CartProduct[]" />
+            app:argType="com.example.ecomapp.data.CartProduct[]" />
         <argument
             android:name="payment"
             app:argType="boolean" />
@@ -93,11 +93,13 @@
     <fragment
         android:id="@+id/userAccountFragment"
         android:name="com.example.ecomapp.fragments.settings.UserAccountFragment"
-        android:label="UserAccountFragment" />
+        android:label="UserAccountFragment"
+        tools:layout="@layout/fragment_user_account"/>
     <fragment
         android:id="@+id/ordersFragment"
         android:name="com.example.ecomapp.fragments.settings.AllOrdersFragment"
-        android:label="OrdersFragment" >
+        android:label="OrdersFragment"
+        tools:layout="@layout/fragment_orders">
         <action
             android:id="@+id/action_ordersFragment_to_orderDetailFragment"
             app:destination="@id/orderDetailFragment" />
@@ -105,9 +107,10 @@
     <fragment
         android:id="@+id/orderDetailFragment"
         android:name="com.example.ecomapp.fragments.settings.OrderDetailFragment"
-        android:label="OrderDetailFragment" >
+        android:label="OrderDetailFragment"
+        tools:layout="@layout/fragment_order_detail">
         <argument
             android:name="order"
-            app:argType="com.example.kelineyt.data.order.Order" />
+            app:argType="com.example.ecomapp.data.order.Order" />
     </fragment>
 </navigation>

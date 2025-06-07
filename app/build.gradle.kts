@@ -7,6 +7,7 @@ plugins {
     id("com.google.devtools.ksp") version "2.0.0-1.0.21"
     id("kotlin-parcelize")
     id("org.jetbrains.kotlin.kapt")
+    id ("androidx.navigation.safeargs.kotlin")
 
 
 }
@@ -77,6 +78,7 @@ dependencies {
     val nav_version = "2.5.2"
     implementation("androidx.navigation:navigation-fragment-ktx:$nav_version")
     implementation("androidx.navigation:navigation-ui-ktx:$nav_version")
+    implementation("com.google.firebase:firebase-appcheck-playintegrity")
 
     implementation(platform("com.google.firebase:firebase-bom:32.4.0"))
     implementation("com.google.firebase:firebase-analytics")

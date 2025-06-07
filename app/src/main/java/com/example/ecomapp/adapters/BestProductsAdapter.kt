@@ -49,8 +49,11 @@ class BestProductsAdapter : RecyclerView.Adapter<BestProductsAdapter.BestProduct
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): BestProductsViewHolder {
         return BestProductsViewHolder(
             ProductRvItemBinding.inflate(
-                LayoutInflater.from(parent.context)
+                LayoutInflater.from(parent.context),
+                parent,
+                false
             )
+
         )
     }
 

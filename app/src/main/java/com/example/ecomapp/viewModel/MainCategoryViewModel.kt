@@ -12,6 +12,7 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.launch
 import javax.inject.Inject
+import com.example.ecomapp.adapters.BestDealsAdapter
 
 @HiltViewModel
 class MainCategoryViewModel @Inject constructor(
@@ -92,6 +93,7 @@ class MainCategoryViewModel @Inject constructor(
             }
         }
     }
+
 }
 
 internal data class PagingInfo(
