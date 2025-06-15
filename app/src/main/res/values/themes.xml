@@ -1,4 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <style name="Theme.MonAppli" parent="android:Theme.Material.Light.NoActionBar" />
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="Theme.EcomAPP" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Couleurs principales -->
+        <item name="colorPrimary">@color/main</item>
+        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorOnPrimary">@color/white</item>
+
+        <item name="colorSecondary">@color/secondMain</item>
+        <item name="colorSecondaryVariant">@color/purple_500</item>
+        <item name="colorOnSecondary">@color/black</item>
+
+        <!-- Fond général -->
+        <item name="android:colorBackground">@color/g_white</item>
+        <item name="colorSurface">@color/g_card_background</item>
+        <item name="colorOnSurface">@color/g_black</item>
+
+        <!-- Erreur -->
+        <item name="colorError">@color/g_red</item>
+        <item name="colorOnError">@color/white</item>
+
+        <!-- Personnalisation supplémentaire -->
+        <item name="android:statusBarColor">@color/purple_700</item>
+        <item name="android:navigationBarColor">@color/g_white</item>
+
+        <!-- Typographie et autres styles -->
+        <item name="materialButtonStyle">@style/Widget.MaterialComponents.Button</item>
+        <item name="materialCardViewStyle">@style/Widget.MaterialComponents.CardView</item>
+    </style>
+
 </resources>

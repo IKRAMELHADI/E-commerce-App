@@ -29,7 +29,7 @@
         >
     </TextView>
     <EditText
-        android:id="@+id/Email"
+        android:id="@+id/LoginEmail"
         android:layout_width="350dp"
         android:layout_height="@dimen/edittextHeight"
         android:layout_marginTop="280dp"
@@ -38,7 +38,7 @@
         android:hint="Email"
         />
     <EditText
-        android:id="@+id/password"
+        android:id="@+id/LoginPassword"
         android:layout_width="350dp"
         android:layout_height="@dimen/edittextHeight"
         android:layout_marginTop="350dp"
@@ -57,7 +57,7 @@
         android:layout_marginTop="420dp"
         android:layout_marginLeft="34dp"
         />
-    <androidx.appcompat.widget.AppCompatButton
+    <Button
         android:id="@+id/LoginBoutton"
         android:layout_width="@dimen/mediumButtonWidth"
         android:layout_height="@dimen/mediumButtonHeight"
@@ -97,7 +97,14 @@
         android:text="Google"
         android:layout_marginTop="570dp"
         android:layout_marginLeft="259dp"/>
-
+    <ProgressBar
+        android:id="@+id/progressBarLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="290dp"
+        android:indeterminateTint="@color/main"
+        android:visibility="gone"/>
 
 
 </FrameLayout>

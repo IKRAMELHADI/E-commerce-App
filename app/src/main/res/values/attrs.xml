@@ -1,0 +1,8 @@
+<resources>
+        <attr name="itemPaddingBottom" format="dimension" />
+        <attr name="itemPaddingTop" format="dimension" />
+
+    <declare-styleable name="SpinningBar">
+        <attr name="spinning_bar_color" format="color" />
+    </declare-styleable>
+</resources>
